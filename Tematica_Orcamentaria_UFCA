@@ -1,0 +1,12 @@
+CASE
+  WHEN Ação IN ("20GK") THEN "Ações acadêmicas"
+  WHEN Ação IN ("4002") THEN "Assistência estudantil"
+  WHEN Ação IN ("4572") THEN "Capacitação de servidores"
+  WHEN Ação IN ("00PW","00OQ") THEN "Contribuições"
+  WHEN Ação IN ("21D7") THEN "Ensino à distância"
+  WHEN Ação IN ("20RK") THEN "Funcionamento"
+  WHEN Ação IN ("21GS") THEN "Internacionalização"
+  WHEN Ação IN ("8282") THEN "Reestruturação"
+  WHEN Ação IN ("14XP") THEN "Implantação"
+  ELSE "Classificar"
+END
