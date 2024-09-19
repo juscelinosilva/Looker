@@ -1,0 +1,4 @@
+CASE
+  WHEN ENDS_WITH(Fonte, "50") THEN "Própria"
+  ELSE "Tesouro"
+END
