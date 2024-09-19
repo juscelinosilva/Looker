@@ -1,0 +1,1 @@
+IF(RIGHT_TEXT(Fonte, 2) IN ( '18', '50', '63', '70', '80', '81', '95', '96' ), 'Própria', 'Tesouro' )
