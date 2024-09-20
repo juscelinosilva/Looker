@@ -1,0 +1,7 @@
+CASE
+  WHEN Execução orçamentária >= 0.99 THEN "Ideal"
+  WHEN Execução orçamentária >= 0.90 THEN "Bom"
+  WHEN Execução orçamentária >= 0.85 THEN "Médio"
+  WHEN Execução orçamentária >= 0.50 THEN "Ruim"
+  ELSE "Crítico"
+END
