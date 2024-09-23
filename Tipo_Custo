@@ -1,0 +1,5 @@
+CASE
+  WHEN YEAR(Data ref) = CAST(SUBSTR(Nota Empenho, 12, 4) AS NUMBER) THEN 'Exercício'
+  WHEN YEAR(Data ref) > CAST(SUBSTR(Nota Empenho, 12, 4) AS NUMBER) THEN 'RAP'
+  ELSE 'DEA'
+END
