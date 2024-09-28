@@ -1,0 +1,11 @@
+CASE
+  WHEN Lapso temporal <= 1 THEN ROUND(Custo 2024 trunc + (12 - MONTH(TODAY()) + 1) * DIVIDE ( Custo L3Mc,  3 ), 0 )
+  WHEN Lapso temporal = 2 THEN ROUND(Custo 2024 trunc + (12 - MONTH(TODAY()) + 2) * DIVIDE ( Custo L3Mc-1,
+    3 ), 0 )
+  WHEN Lapso temporal = 3 THEN ROUND(Custo 2024 trunc + (12 - MONTH(TODAY()) + 3) * DIVIDE ( Custo L3Mc-2,  3 ), 0 )
+  WHEN Lapso temporal = 4 THEN ROUND(Custo 2024 trunc + (12 - MONTH(TODAY()) + 4) * DIVIDE ( Custo L3Mc-3,
+    3 ), 0 )
+  WHEN Lapso temporal >= 5 AND Custo L12M > 0 THEN NARY_MAX(Custo 2024, Custo L12M)
+  WHEN Custo L12M = 0 THEN 0
+  ELSE NULL
+END
