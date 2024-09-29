@@ -1,0 +1,8 @@
+CASE
+  WHEN Ano emissão nota >= 2023 AND Fonte Nr = 50 THEN CONCAT(Grupo fonte, "0", Fonte Nr)
+  WHEN Ano emissão nota >= 2023
+AND Fonte Nr = 0 THEN CONCAT(Grupo fonte, "00", Fonte Nr)
+  WHEN Fonte Nr = 8 THEN '3008'
+WHEN Fonte Nr = 0 THEN '100'
+  ELSE concat(Grupo fonte,Fonte Nr)
+END
