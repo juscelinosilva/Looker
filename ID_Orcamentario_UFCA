@@ -1,8 +1,0 @@
-CONCAT(PTRES, ".",
-  CASE
-    WHEN YEAR(Data) >= 2023 AND Fonte Nr = 0 THEN CONCAT(Grupo Fonte, '000')
-    WHEN YEAR(Data) >= 2023
-  AND Fonte Nr = 8 THEN CONCAT(Grupo Fonte, '008')
-    WHEN YEAR(Data) >= 2023 AND Fonte Nr = 50 THEN CONCAT(Grupo Fonte, '050')
-    WHEN Fonte Nr = 0 THEN CONCAT(Grupo Fonte, '00')
-    ELSE CONCAT(Grupo Fonte, Fonte Nr) END, ".", GND)
