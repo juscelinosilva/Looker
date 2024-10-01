@@ -1,0 +1,1 @@
+PARSE_DATE('%m%Y', CONCAT(01, Ano))
