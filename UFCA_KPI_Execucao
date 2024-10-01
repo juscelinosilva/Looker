@@ -1,7 +1,6 @@
 CASE
   WHEN Execução Dot. Atual >= 0.99 THEN "Ideal"
   WHEN Execução Dot. Atual >= 0.90 THEN "Bom"
-  WHEN Execução Dot. Atual >= 0.85 THEN "Médio"
   WHEN Execução Dot. Atual >= 0.50 THEN "Ruim"
   ELSE "Crítico"
 END
