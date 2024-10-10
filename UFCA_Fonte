@@ -1,6 +1,6 @@
 CASE
-  WHEN Ano >= 2023 AND E = 50 THEN CONCAT(C, "0", E )
-  WHEN Ano >= 2023
+  WHEN YEAR(Data) >= 2023 AND E = 50 THEN CONCAT(C, "0", E )
+  WHEN YEAR(Data) >= 2023
 AND E = 0 THEN CONCAT(C, "00",  E )
   WHEN E = 8 THEN '3008'
   WHEN E = 0 THEN '100'
