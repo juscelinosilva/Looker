@@ -1,5 +1,5 @@
 CASE
-  WHEN ID GND = 3 THEN 'Outras Despesas Correntes (Custeio)'
-  WHEN ID GND = 4 THEN 'Investimentos'
+  WHEN GND ID = 3 THEN 'Outras Despesas Correntes (Custeio)'
+  WHEN GND ID = 4 THEN 'Investimentos'
   ELSE 'Aguardando Classificação'
 END
