@@ -1,8 +1,8 @@
 CASE
-  WHEN YEAR(Data) >= 2023 AND E = 50 THEN CONCAT(C, "0", E )
+  WHEN YEAR(Data) >= 2023 AND Fonte = 50 THEN CONCAT(Grupo Fonte, "0", Fonte )
   WHEN YEAR(Data) >= 2023
-AND E = 0 THEN CONCAT(C, "00",  E )
-  WHEN E = 8 THEN '3008'
-  WHEN E = 0 THEN '100'
-  ELSE CONCAT(C, E )
+AND Fonte = 0 THEN CONCAT(Grupo Fonte, "00",  Fonte )
+  WHEN Fonte = 8 THEN '3008'
+  WHEN Fonte = 0 THEN '100'
+  ELSE CONCAT(Grupo Fonte, Fonte )
 END
