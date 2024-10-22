@@ -1,6 +1,7 @@
 CASE
-  WHEN Execução Orçamentária >= 0.99 THEN "Ideal"
-  WHEN Execução Orçamentária >= 0.90 THEN "Bom"
-  WHEN Execução Orçamentária >= 0.50 THEN "Ruim"
-  ELSE "Crítico"
+  WHEN Taxa de Empenho > 1 OR Taxa de Empenho = 0 THEN '0 - Inadequada'
+  WHEN Taxa de Liquidação > (MAX(MONTH(TODAY())) - 1) / 12 THEN '1 - Alta'
+  WHEN Taxa de Liquidação >= (MAX(MONTH(TODAY())) - 2) / 12 THEN '2 - Boa'
+  WHEN Taxa de Liquidação >= (MAX(MONTH(TODAY())) - 3) / 12 THEN '3 - Regular'
+  ELSE '4 - Baixa'
 END
