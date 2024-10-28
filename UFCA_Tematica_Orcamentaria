@@ -1,12 +1,18 @@
 CASE
-  WHEN Ação IN ("20GK") THEN "Ações acadêmicas"
-  WHEN Ação IN ("4002") THEN "Assistência estudantil"
-  WHEN Ação IN ("4572") THEN "Capacitação de servidores"
-  WHEN Ação IN ("00PW","00OQ") THEN "Contribuições"
-  WHEN Ação IN ("21D7") THEN "Ensino à distância"
-  WHEN Ação IN ("20RK") THEN "Funcionamento"
-  WHEN Ação IN ("21GS") THEN "Internacionalização"
-  WHEN Ação IN ("8282") THEN "Reestruturação"
-  WHEN Ação IN ("14XP") THEN "Implantação"
-  ELSE "Classificar"
+  WHEN STARTS_WITH(Ação (desc.), '20RK') OR STARTS_WITH(Ação (desc.), '14XP') THEN 'Funcionamento/Implantação'
+  WHEN STARTS_WITH(Ação (desc.), '09HB') THEN 'Contribuição Patronal'
+  WHEN STARTS_WITH(Ação (desc.), '4002') THEN 'Assistência Estudantil'
+  WHEN STARTS_WITH(Ação (desc.), '21GS') THEN 'Internacionalização'
+  WHEN STARTS_WITH(Ação (desc.), '21D7') THEN 'Apoio ao EAD'
+  WHEN STARTS_WITH(Ação (desc.), '0005') THEN 'Precatórios'
+  WHEN STARTS_WITH(Ação (desc.), '8282') THEN 'Reestruturação/Modernização'
+  WHEN STARTS_WITH(Ação (desc.), '00PW')
+OR STARTS_WITH(Ação (desc.), '00OQ')
+OR STARTS_WITH(Ação (desc.), '00OL') THEN 'Anuidade/Contribuição'
+  WHEN STARTS_WITH(Ação (desc.), '20TP') THEN 'Ativos da União'
+  WHEN STARTS_WITH(Ação (desc.), '0181') THEN 'Aposentadorias e Pensões'
+  WHEN STARTS_WITH(Ação (desc.), '4572') THEN 'Capacitação de Servidores'
+  WHEN STARTS_WITH(Ação (desc.), '20GK') THEN 'Apoio a Ações Acadêmicas'
+  WHEN LEFT_TEXT(Ação (desc.), 4) IN ( '2011', '2012', '00S6', '212B', '2004', '00M1', '216H', '2010' ) THEN 'Auxílios/Benefícios'
+  ELSE 'Classificar'
 END
